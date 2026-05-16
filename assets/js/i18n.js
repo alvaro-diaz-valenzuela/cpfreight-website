@@ -55,7 +55,27 @@ const i18n = (function(){
       const key = el.getAttribute('data-i18n');
       const value = t(key);
       const attr = el.getAttribute('data-i18n-attr');
-      if(attr){ el.setAttribute(attr, value); } else { el.innerHTML = value; }
+      if(attr){
+        el.setAttribute(attr, value);
+      } else {
+        // If element has child elements, replace only the first text node to preserve inner structure (e.g., <a>Home <span>×</span>)
+        if(el.children && el.children.length > 0){
+          let replaced = false;
+          for(const node of el.childNodes){
+            if(node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0){
+              node.nodeValue = value + (node.nodeValue.endsWith(' ') ? ' ' : ' ');
+              replaced = true;
+              break;
+            }
+          }
+          if(!replaced){
+            // fallback
+            el.innerHTML = value;
+          }
+        } else {
+          el.innerHTML = value;
+        }
+      }
       count++;
     });
 
@@ -67,7 +87,20 @@ const i18n = (function(){
       if(!text) return;
       const key = reverseMap[text];
       if(key && translations[key]){
-        el.innerHTML = translations[key];
+        const value = translations[key];
+        if(el.children && el.children.length > 0){
+          let replaced = false;
+          for(const node of el.childNodes){
+            if(node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0){
+              node.nodeValue = value + (node.nodeValue.endsWith(' ') ? ' ' : ' ');
+              replaced = true;
+              break;
+            }
+          }
+          if(!replaced) el.innerHTML = value;
+        } else {
+          el.innerHTML = value;
+        }
         el.setAttribute('data-i18n', key);
         count++;
       }
