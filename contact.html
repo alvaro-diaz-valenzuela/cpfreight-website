@@ -2,7 +2,48 @@
 <html lang="en">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title data-i18n="meta.title">Contact - C P Freight Forwarders</title><link rel="stylesheet" href="style.css"></head>
 <body>
-<header>...</header>
+<header class="main-header" id="mainHeader">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/cpf-logo.jpeg" alt="C P Freight Forwarders" class="logo-main">
+          <img src="assets/cpf-logo.jpeg" alt="C P Freight Forwarders" class="logo-sticky">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" data-i18n="nav.home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html" data-i18n="nav.about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html" data-i18n="nav.services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sustainability.html" data-i18n="nav.sustainability">Sustainability</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="career.html" data-i18n="nav.career">Career</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="contact.html" data-i18n="nav.contact">Contact Us <span class="active-dot">×</span></a>
+            </li>
+          </ul>
+          <div class="navbar-right d-flex align-items-center gap-2">
+            <select id="langSelect" class="form-select form-select-sm" style="width:auto;">
+              <option value="en">EN</option>
+              <option value="es">ES</option>
+            </select>
+            <button class="get-in-touch-btn" onclick="openSidebar()" data-i18n="btn.get_in_touch"><i class="bi bi-list"></i> Get In Touch</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
 <main>
   <h1 data-i18n="nav.contact">Contact Us</h1>
   <p data-i18n="sidebar.address"></p>
