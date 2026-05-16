@@ -1,0 +1,42 @@
+{
+  "nav.home": "Home",
+  "nav.about": "About Us",
+  "nav.services": "Services",
+  "nav.sustainability": "Sustainability",
+  "nav.career": "Career",
+  "nav.contact": "Contact Us",
+
+  "btn.get_in_touch": "Get In Touch",
+
+  "sidebar.title": "Connect with C P Freight Forwarders",
+  "sidebar.description": "Ready to take the first step towards unlocking opportunity, realizing goals, and embracing innovation?",
+  "sidebar.contact_label": "Contact Us",
+  "sidebar.address_label": "Address",
+  "sidebar.follow_label": "Follow Us",
+  "sidebar.say_hello": "Say Hello",
+  "sidebar.phone": "+91 2246644233 /34 /35",
+  "sidebar.address": "Office No. A-908 & 909, Shelton Sapphire, Plot No.18 & 19, Sector-15, CBD Belapur, Navi Mumbai 400 614, India",
+  "sidebar.copyright": "Copyright 2025 {company} | Design & Developed By {author}",
+
+  "hero.slide1": "Global Freight Forwarding. Local Expertise. Seamless Solutions.",
+  "hero.slide2": "Your Cargo. Our Commitment. Worldwide.",
+  "hero.slide3": "From Ports to Borders—We Keep Your Business Moving.",
+  "hero.learn_more": "Learn More",
+
+  "section.about.tag": "About Us",
+  "section.about.title": "About Us",
+  "section.about.more": "About Us More",
+
+  "section.services.title": "Our Services",
+  "section.achievements.title": "Achievements",
+  "section.why.title": "Why Us ?",
+  "section.industry.title": "INDUSTRY GROWTH",
+
+  "footer.quick_links": "Quick Links",
+  "footer.services": "Services",
+  "footer.contact": "Contact us",
+  "footer.say_hello": "Say Hello",
+
+  "group.our_strength": "Our Group Strength",
+  "group.desc": "Together, these entities form a powerful logistics ecosystem that ensures businesses get end-to-end solutions."
+}
