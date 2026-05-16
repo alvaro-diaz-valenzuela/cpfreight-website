@@ -67,12 +67,12 @@
 <section class="inner-hero" style="background-image: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url('https://cpfreightforwarders.com/assets/img/project-img2.jpeg');">
   <div class="container">
     <div class="inner-hero-content">
-      <span class="inner-label">Contact Us</span>
-      <h1>Let's Move Your<br>Business Forward.</h1>
+      <span class="inner-label" data-i18n="nav.contact">Contact Us</span>
+      <h1 data-i18n="hero.h1.contact">Let's Move Your<br>Business Forward.</h1>
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb inner-breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Contact Us</li>
+          <li class="breadcrumb-item"><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li class="breadcrumb-item active" data-i18n="nav.contact">Contact Us</li>
         </ol>
       </nav>
     </div>
@@ -85,36 +85,36 @@
     <div class="row g-5">
       <!-- Contact Info -->
       <div class="col-lg-5">
-        <div class="section-tag">Get In Touch</div>
-        <h2 class="inner-section-title">Connected With Us</h2>
-        <p class="inner-text">We're here to help you navigate the world of logistics. Reach out to us with any inquiries, quotes, or just to learn more about how we can support your business.</p>
+        <div class="section-tag" data-i18n="contact.info.tag">Get In Touch</div>
+        <h2 class="inner-section-title" data-i18n="contact.info.h2">Connected With Us</h2>
+        <p class="inner-text" data-i18n="contact.info.p">We're here to help you navigate the world of logistics. Reach out to us with any inquiries, quotes, or just to learn more about how we can support your business.</p>
 
         <div class="contact-info-cards mt-4">
           <div class="contact-info-card">
             <div class="cic-icon"><i class="bi bi-telephone-fill"></i></div>
             <div class="cic-body">
-              <span class="cic-label">To More Inquiry</span>
-              <h5><a href="tel:+912246644233">+91 2246644233 / 34 / 35</a></h5>
+              <span class="cic-label" data-i18n="contact.info.inquiry_label">To More Inquiry</span>
+              <h5><a href="tel:+912246644233" data-i18n="sidebar.phone">+91 2246644233 / 34 / 35</a></h5>
             </div>
           </div>
           <div class="contact-info-card">
             <div class="cic-icon"><i class="bi bi-geo-alt-fill"></i></div>
             <div class="cic-body">
-              <span class="cic-label">Our Location</span>
-              <h5>Office No. A-908 &amp; 909, Shelton Sapphire, Plot No.18 &amp; 19, Sector-15, CBD Belapur, Navi Mumbai 400 614, India</h5>
+              <span class="cic-label" data-i18n="contact.info.location_label">Our Location</span>
+              <h5 data-i18n="sidebar.address">Office No. A-908 &amp; 909, Shelton Sapphire, Plot No.18 &amp; 19, Sector-15, CBD Belapur, Navi Mumbai 400 614, India</h5>
             </div>
           </div>
           <div class="contact-info-card">
             <div class="cic-icon"><i class="bi bi-envelope-fill"></i></div>
             <div class="cic-body">
-              <span class="cic-label">To Send Mail</span>
-              <h5><a href="mailto:info@cpfreightforwarders.com">info@cpfreightforwarders.com</a></h5>
+              <span class="cic-label" data-i18n="contact.info.mail_label">To Send Mail</span>
+              <h5><a href="mailto:info@cpfreightforwarders.com" data-i18n="sidebar.email">info@cpfreightforwarders.com</a></h5>
             </div>
           </div>
         </div>
 
         <div class="contact-social mt-4">
-          <p class="fw-600 mb-2">Follow Us:</p>
+          <p class="fw-600 mb-2" data-i18n="contact.info.follow">Follow Us:</p>
           <div class="footer-social">
             <a href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
             <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
@@ -127,42 +127,42 @@
       <!-- Contact Form -->
       <div class="col-lg-7">
         <div class="contact-form-card">
-          <h3>Send Us a Message</h3>
-          <p class="text-muted mb-4">Fill in the details below and we'll get back to you within 24 hours.</p>
+          <h3 data-i18n="contact.form.h3">Send Us a Message</h3>
+          <p class="text-muted mb-4" data-i18n="contact.form.p">Fill in the details below and we'll get back to you within 24 hours.</p>
           <form onsubmit="handleContactSubmit(event)" class="contact-form" id="contactForm">
             <div class="row g-3">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label>Full Name <span class="required">*</span></label>
-                  <input type="text" class="form-control" placeholder="Your full name" required>
+                  <label data-i18n="contact.form.label.name">Full Name <span class="required">*</span></label>
+                  <input type="text" class="form-control" data-i18n-attr="placeholder" data-i18n="contact.form.ph.name" placeholder="Your full name" required>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label>Email <span class="required">*</span></label>
-                  <input type="email" class="form-control" placeholder="Your email address" required>
+                  <label data-i18n="contact.form.label.email">Email <span class="required">*</span></label>
+                  <input type="email" class="form-control" data-i18n-attr="placeholder" data-i18n="contact.form.ph.email" placeholder="Your email address" required>
                 </div>
               </div>
               <div class="col-12">
                 <div class="form-group">
-                  <label>Phone <span class="required">*</span></label>
-                  <input type="tel" class="form-control" placeholder="Your phone number" required>
+                  <label data-i18n="contact.form.label.phone">Phone <span class="required">*</span></label>
+                  <input type="tel" class="form-control" data-i18n-attr="placeholder" data-i18n="contact.form.ph.phone" placeholder="Your phone number" required>
                 </div>
               </div>
               <div class="col-12">
                 <div class="form-group">
-                  <label>Message <span class="required">*</span></label>
-                  <textarea class="form-control" rows="5" placeholder="How can we help you?" required></textarea>
+                  <label data-i18n="contact.form.label.message">Message <span class="required">*</span></label>
+                  <textarea class="form-control" rows="5" data-i18n-attr="placeholder" data-i18n="contact.form.ph.message" placeholder="How can we help you?" required></textarea>
                 </div>
               </div>
               <div class="col-12">
-                <button type="submit" class="primary-btn w-100">Submit Now <i class="bi bi-send"></i></button>
+                <button type="submit" class="primary-btn w-100" data-i18n="contact.form.submit">Submit Now <i class="bi bi-send"></i></button>
               </div>
             </div>
           </form>
           <div id="contact-success" class="form-success-msg d-none">
             <i class="bi bi-check-circle-fill"></i>
-            <p>Thank you! Your message has been sent. We'll get back to you within 24 hours.</p>
+            <p data-i18n="contact.form.success">Thank you! Your message has been sent. We'll get back to you within 24 hours.</p>
           </div>
         </div>
       </div>
@@ -188,31 +188,44 @@
       <div class="col-lg-3 col-md-6">
         <div class="footer-brand">
           <a href="index.html"><img src="assets/cpf-logo.jpeg" alt="C P Freight Forwarders" class="footer-logo"></a>
-          <p>Welcome to C P Forwarders, where innovation meet our passion in a journey that started dream.</p>
-          <h4 class="footer-est">EST . 2000</h4>
+          <p data-i18n="footer.brand.p">Welcome to C P Forwarders, where innovation meets our passion in a journey that started as a dream.</p>
+          <h4 class="footer-est" data-i18n="footer.est">EST . 2000</h4>
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
-        <div class="footer-widget"><h5>Quick Links</h5><div class="footer-divider"></div>
-          <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="sustainability.html">Sustainability</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact Us</a></li></ul>
+        <div class="footer-widget"><h5 data-i18n="footer.quick_links">Quick Links</h5><div class="footer-divider"></div>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+            <li><a href="sustainability.html" data-i18n="nav.sustainability">Sustainability</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
+          </ul>
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
-        <div class="footer-widget"><h5>Services</h5><div class="footer-divider"></div>
-          <ul><li><a href="services.html">Ocean Freight</a></li><li><a href="services.html">Air Freight</a></li><li><a href="services.html">Customs Clearance</a></li><li><a href="services.html">Road &amp; Rail Transport</a></li><li><a href="services.html">Project Cargo &amp; Special Logistics</a></li><li><a href="services.html">Supply Chain Solutions</a></li></ul>
+        <div class="footer-widget"><h5 data-i18n="footer.services_label">Services</h5><div class="footer-divider"></div>
+          <ul>
+            <li><a href="services.html" data-i18n="service.ocean.title">Ocean Freight</a></li>
+            <li><a href="services.html" data-i18n="service.air.title">Air Freight</a></li>
+            <li><a href="services.html" data-i18n="service.customs.title">Customs Clearance</a></li>
+            <li><a href="services.html" data-i18n="service.road.title">Road &amp; Rail Transport</a></li>
+            <li><a href="services.html" data-i18n="service.project.title">Project Cargo &amp; Special Logistics</a></li>
+            <li><a href="services.html" data-i18n="service.supply.title">Supply Chain Solutions</a></li>
+          </ul>
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
         <div class="footer-widget">
-          <div class="footer-contact-item"><div class="fci-label">Contact us</div><h6><a href="tel:+912246644233">+91 2246644233 /34 /35</a></h6></div>
-          <div class="footer-contact-item"><div class="fci-label">Address</div><h6><a href="#">Office No. A-908 &amp; 909, Shelton Sapphire, Plot No.18 &amp; 19, Sector-15, CBD Belapur, Navi Mumbai 400 614, India</a></h6></div>
-          <div class="footer-contact-item"><div class="fci-label">Say Hello</div><h6><a href="mailto:info@cpfreightforwarders.com">info@cpfreightforwarders.com</a></h6></div>
+          <div class="footer-contact-item"><div class="fci-label" data-i18n="footer.contact_label">Contact us</div><h6><a href="tel:+912246644233" data-i18n="sidebar.phone">+91 2246644233 /34 /35</a></h6></div>
+          <div class="footer-contact-item"><div class="fci-label" data-i18n="footer.address_label">Address</div><h6><a href="#" data-i18n="sidebar.address">Office No. A-908 &amp; 909, Shelton Sapphire, Plot No.18 &amp; 19, Sector-15, CBD Belapur, Navi Mumbai 400 614, India</a></h6></div>
+          <div class="footer-contact-item"><div class="fci-label" data-i18n="footer.say_hello">Say Hello</div><h6><a href="mailto:info@cpfreightforwarders.com">info@cpfreightforwarders.com</a></h6></div>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="row align-items-center">
-        <div class="col-md-6"><p>Copyright 2025 <a href="#">C P Freight Forwarders</a> | Design &amp; Developed By <a href="#">Bluehands</a></p></div>
+        <div class="col-md-6"><p data-i18n="footer.copyright">Copyright 2025 C P Freight Forwarders | Design &amp; Developed By Bluehands</p></div>
         <div class="col-md-6 text-md-end"><div class="footer-social"><a href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a><a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a><a href="https://x.com/" target="_blank"><i class="bi bi-twitter-x"></i></a><a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a></div></div>
       </div>
     </div>
