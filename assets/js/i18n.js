@@ -50,57 +50,51 @@ const i18n = (function(){
 
   function apply(){
     let count = 0;
-    // First apply explicit attributes
+
+    // Pass 1: elements with explicit data-i18n attributes
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       const value = t(key);
       const attr = el.getAttribute('data-i18n-attr');
       if(attr){
         el.setAttribute(attr, value);
-      } else {
-        // If element has child elements, replace only the first text node to preserve inner structure (e.g., <a>Home <span>×</span>)
-        if(el.children && el.children.length > 0){
-          let replaced = false;
+      } else if(el.children.length > 0){
+        // If every child element is <br>, the element is a multi-line text block —
+        // replace the whole content so \n in the value renders as <br>.
+        const allBR = Array.from(el.children).every(c => c.tagName === 'BR');
+        if(allBR){
+          el.innerHTML = value.replace(/\n/g, '<br>');
+        } else {
+          // Structural children (e.g. <a>Home <span>×</span></a>) — replace only
+          // the first non-empty text node to preserve the inner markup.
           for(const node of el.childNodes){
             if(node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0){
-              node.nodeValue = value + (node.nodeValue.endsWith(' ') ? ' ' : ' ');
-              replaced = true;
+              const leading = node.nodeValue.match(/^\s*/)[0];
+              const trailing = node.nodeValue.match(/\s*$/)[0];
+              node.nodeValue = leading + value + trailing;
               break;
             }
           }
-          if(!replaced){
-            // fallback
-            el.innerHTML = value;
-          }
-        } else {
-          el.innerHTML = value;
+          // If no direct text node found, children carry their own data-i18n — skip
         }
+      } else {
+        el.innerHTML = value.replace(/\n/g, '<br>');
       }
       count++;
     });
 
-    // Now auto-translate elements by matching their exact English text to keys
-    const selectors = 'h1,h2,h3,h4,h5,p,span,a,li,button,small,label';
+    // Pass 2: auto-match leaf elements by their exact English text content.
+    // Only processes elements with no child elements to avoid destroying link
+    // structure in <li><a>…</a></li> containers.
+    const selectors = 'h1,h2,h3,h4,h5,p,span,a,li,button,small,label,div';
     document.querySelectorAll(selectors).forEach(el => {
       if(el.hasAttribute('data-i18n')) return;
+      if(el.children.length > 0) return;
       const text = el.textContent && el.textContent.trim();
       if(!text) return;
       const key = reverseMap[text];
       if(key && translations[key]){
-        const value = translations[key];
-        if(el.children && el.children.length > 0){
-          let replaced = false;
-          for(const node of el.childNodes){
-            if(node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0){
-              node.nodeValue = value + (node.nodeValue.endsWith(' ') ? ' ' : ' ');
-              replaced = true;
-              break;
-            }
-          }
-          if(!replaced) el.innerHTML = value;
-        } else {
-          el.innerHTML = value;
-        }
+        el.textContent = translations[key];
         el.setAttribute('data-i18n', key);
         count++;
       }
